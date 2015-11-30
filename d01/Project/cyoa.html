@@ -3,42 +3,135 @@
 
 
 <head>
-<link rel="stylesheet" type="text/css" href="cyoa.css">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
 <style>
 
-.beginpage{
-  background: url("http://i.imgur.com/1wpT6vn.jpg") no-repeat center center fixed;
+.start{
+  display: block;
+  background:url("http://i.imgur.com/1wpT6vn.jpg");
+  width: 950px;
+  height: 580px;
 }
 
+#welcome{
+  padding-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: "Quicksand";
+  color: black;
+}
+#disclaimer{
+  font-family: "Amatic SC";
+  color: black;
+  margin-top: 500px
+}
 
+#startbutton{
+  margin-left: 420px;
+}
+
+.game{
+  display: none;
+  border: 2px solid black;
+  height: 690px;
+  width: 100%;
+  position: relative;
+  border-radius: 50px;
+}
+
+.title{
+  border: 2px solid #ffd700;
+  width: 50%;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 300px;
+  border-radius: 12px;
+  padding: 8px;
+  font-family: "Amatic SC";
+  font-size: 25px;
+}
+
+.textbox{
+  border: 2px solid #ffd700;
+  width: 95%;
+  height: 100px;
+  margin-top: 420px;
+  margin-left: 22px;
+  border-radius: 12px;
+  padding: 8px;
+  font-family: "Sue Ellen Francisco";
+  font-size: 25px;
+}
+
+#option1{
+  border: 2px solid #ffd700;
+  height: 100px;
+  width: 400px;
+  position: relative;
+  left: 800px;
+  top: -450px;
+  border-radius: 12px;
+}
+#option2{
+  border: 2px solid #ffd700;
+  height: 100px;
+  width: 400px;
+  position: relative;
+  left: 800px;
+  top: -400px;
+  border-radius: 12px;
+}
+
+.options{
+  font-family: "Voltaire";
+  font-size: 17px;
+}
+
+#lost{
+  display: none;
+}
 </style>
 </head>
 <body>
   <title>DON'T LET KANYE DIE!!!</title>
-  <div class="beginpage">
-    <img src="http://i.imgur.com/1wpT6vn.jpg">
-    <button type="button">Start Game</button>
+
+
+  <div class="start">
+    <p id="welcome">Welcome to the game, Kanye has cheated on Kim with Susan Boyle, and she found out! Help Kanye escape from Kim's wrath!</p>
+    <p id="disclaimer">*All characters appearing in this work are fictitious. Any resemblance to real persons, living or dead, is purely coincidental.*</p>
+    <button type="startbutton" id="startbutton">Start Game</button>
   </div>
-  <div class="body">
+
+
+  <div class="game">
     <div class="background">
       <div class="title">
+      This is a little story about Kanye West
       </div>
       <div class = "kanye">
       </div>
       <div class="textbox">
+        Hey lol
       </div>
       <div class="options" id="option1">
+      Click here to have Kanye live.
       </div>
       <div class="options" id="option2">
+      Click here to have Kanye die.
       </div>
 
     </div>
   </div>
-</body>
+  <div class="death">
+    <div id="deathanim">
+    </div>
+    <p id="lost">"You've lost the game."</p>
+  </div>
 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="cyoa.js"></script>
-
-
+</body>
 </html>
