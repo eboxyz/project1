@@ -29,9 +29,11 @@ $(document).ready(function(){
       $('#option1').html('All the way to Chicago?')
       $('#option2').html("Jay's crib.");
     } else if (count== 3){
-       $('.textbox').html("The plane has crashed. They actually forgot to fuel the plane. Sucks to suck.");
-       $('#option1').html("You can't play anymore, Kanye's dead...");
-       $('#option2').html("Nice try, I guess."); //gameover
+      $('.textbox').html("The plane has crashed. They actually forgot to fuel the plane. Sucks to suck.");
+      $('#option1').html("You can't play anymore, Kanye's dead...");
+      $('#option2').html("Nice try, I guess.");
+      // $('.game').hide();
+      $('#lost').show();  //gameover
     } else if(count == 4){
       $('.textbox').html("Cool, you made it to Jay's house. What do you want to do?")
       $('#option1').html("Talk to Jay.");
@@ -43,7 +45,9 @@ $(document).ready(function(){
     } else if (count ==6){
       $('.textbox').html("Didn't you learn the first time? Talking to Kim won't solve anything!");
       $('#option1').html("Really now...");
-      $('#option2').html("Moral of the story is keep running from your problems."); //gameover
+      $('#option2').html("Moral of the story is keep running from your problems.");
+      $('.game').hide();
+      $('#lost').show();  //gameover
     } else if(count ==7){
       $('.textbox').html("Wow! A musical genie is waiting for you at your studio. He introduces himself as DJ Khaled. He's mad that you haven't hit him up for a song in a while. You have to answer his questions properly in order to pass.");
       $('#option1').html("Are you ready to answer?");
@@ -59,7 +63,9 @@ $(document).ready(function(){
     } else if (count ==10){
       $('.textbox').html("Haha, another one bites the dust.");
       $('#option1').html("It really just isn't your day.");
-      $('#option2').html("It REALLY isn't your day.") //gameover
+      $('#option2').html("It REALLY isn't your day.")
+      $('.game').hide();
+      $('#lost').show();  //gameover
     } else if (count == 11){
       $('.textbox').html("Looks like you survived the genie's intellectual barrage. He's been smitten by the North American Goddess of music, Drake. There's a golden spatula left behind, do you take it?");
       $('#option1').html("Yes");
@@ -75,7 +81,9 @@ $(document).ready(function(){
     } else if(count ==14){
       $('.textbox').html("That gold is actually a new genus of poisonous fungi, that exclusively grows on chocolate mousse cakes.");
       $('#option1').html("I even gave you the right choice in the last one. Are you paying attention?");
-      $('#option2').html("You need to fuel your thirst."); //gameover
+      $('#option2').html("You need to fuel your thirst.");
+      $('.game').hide();
+      $('#lost').show();  //gameover
     } else if(count ==15){
       $('.textbox').html("You can choose anything you want! Wow! But you can choose only one thing of what you want, and you have to eat a whole plate of it. You also only have two options. What a surprise.");
       $('#option1').html("Beets");
@@ -83,7 +91,9 @@ $(document).ready(function(){
     } else if(count ==16){
       $('.textbox').html("Someone likes their Beets. Too bad Dr. Dre's suing you for copyright infringement. Sucks to suck.");
       $('#option1').html("Bears, Beets.")
-      $('#option2').html("Battlestar Galactica.") //gameover
+      $('#option2').html("Battlestar Galactica.")
+      $('.game').hide();
+      $('#lost').show();  //gameover
     } else if(count ==17){
       $('.textbox').html("SpongeBob: 'Looks like you're a pretty good chef. I am too.'")
       $('#option1').html("something something accept challenge");
@@ -99,7 +109,9 @@ $(document).ready(function(){
     } else if(count==20){
       $('.textbox').html("Imbecile! The judges are all on the Atkins diet, and deathly afraid of ingesting anytype of carbohydrates.");
       $('#option1').html("These buns are from your local grocer aren't they.")
-      $('#option2').html("The esteemed judges only eat farm to table, gluten free products.") //gameover
+      $('#option2').html("The esteemed judges only eat farm to table, gluten free products.")
+      $('.game').hide();
+      $('#lost').show();  //gameover
     }
   });
 
@@ -122,7 +134,9 @@ $(document).ready(function(){
     } else if( count ==4){
       $('.textbox').html("Freak accident...Blue Ivy choked Kanye to death with a slinky.");
       $('#option1').html("Why didn't Kanye fight back?");
-      $('#option2').html("He's a pacifist."); //gameover
+      $('#option2').html("He's a pacifist.");
+      $('.game').hide();
+      $('#lost').show();  //gameover
     } else if(count == 5){
       $('.textbox').html("Jay doesn't agree with your actions, but he won't judge you for your choice.");
       $('#option1').html("Should you come clean?");
@@ -162,7 +176,9 @@ $(document).ready(function(){
     }else if (count ==15){
       $('.textbox').html("You died.");
       $('#option1').html("These can't all be witty.");
-      $('#option2').html("But really, this one wasn't too hard.") //gameover
+      $('#option2').html("But really, this one wasn't too hard.")
+      $('.game').hide();
+      $('#lost').show();  //gameover
     } else if (count==16){
       $('.textbox').html("Them olives up to something. Justin Timberlake hands you a bottle of Olive Juice, and whispers 'Olive Juice...' sensually in your ear. He whisks you away, taking you to a local park. Spongebob approaches you.");
       $('#option1').html("Do you talk to him?");
@@ -170,7 +186,9 @@ $(document).ready(function(){
     } else if (count==17){
       $('.textbox').html("Neptune instantly smites you.");
       $('#option1').html("You're a jerk you know that?");
-      $('#option2').html("Be a nice guy for once."); //gameover
+      $('#option2').html("Be a nice guy for once.");
+      $('.game').hide();
+      $('#lost').show();  //gameover
     } else if(count==19){
       $('.textbox').html("Who chops the vegetables first? What are you some kind of culinary prodigy?");
       $('#option1').html("That'll show you.");
