@@ -31,7 +31,7 @@ $(document).ready(function(){
     } else if (count== 3){
        $('.textbox').html("The plane has crashed. They actually forgot to fuel the plane. Sucks to suck.");
        $('#option1').html("You can't play anymore, Kanye's dead...");
-       $('#option2').html("Nice try, I guess.");
+       $('#option2').html("Nice try, I guess."); //gameover
     } else if(count == 4){
       $('.textbox').html("Cool, you made it to Jay's house. What do you want to do?")
       $('#option1').html("Talk to Jay.");
@@ -43,7 +43,7 @@ $(document).ready(function(){
     } else if (count ==6){
       $('.textbox').html("Didn't you learn the first time? Talking to Kim won't solve anything!");
       $('#option1').html("Really now...");
-      $('#option2').html("Moral of the story is keep running from your problems.");
+      $('#option2').html("Moral of the story is keep running from your problems."); //gameover
     } else if(count ==7){
       $('.textbox').html("Wow! A musical genie is waiting for you at your studio. He introduces himself as DJ Khaled. He's mad that you haven't hit him up for a song in a while. You have to answer his questions properly in order to pass.");
       $('#option1').html("Are you ready to answer?");
@@ -52,6 +52,30 @@ $(document).ready(function(){
       $('.textbox').html("Generic question here.");
       $('#option1').html("Generic answer 1"); //this one is death
       $('#option2').html("Generic answer 2"); //this one is life
+    } else if (count ==9){
+      $('.textbox').html("You ain't smart enough for DJ Khaled");
+      $('#option1').html("Blat blat blat"); //something new pls
+      $('#option2').html("I can't think of anything witty for this.") // LOL CHANGE THIS
+    } else if (count ==10){
+      $('.textbox').html("Haha, another one bites the dust.");
+      $('#option1').html("It really just isn't your day.");
+      $('#option2').html("It REALLY isn't your day.") //gameover
+    } else if (count == 11){
+      $('.textbox').html("Looks like you survived the genie's intellectual barrage. He's been smitten by the North American Goddess of music, Drake. There's a golden spatula left behind, do you take it?");
+      $('#option1').html("Yes");
+      $('#option2').html("It's your choice, but why wouldn't you take a golden spatula...");
+    } else if(count ==12){
+      $('.textbox').html("You're overcome by tremendous hunger and thirst, where do you go?");
+      $('#option1').html("Feed your hunger.");
+      $('#option2').html("Fuel your thirst.");
+    } else if(count ==13){
+      $('.textbox').html("You have the option of what you want to eat.");
+      $('#option1').html("There's a gold flake topped chocolate mousse cake though"); //you die
+      $('#option2').html("Trust me, you'll want to fuel your thirst instead.");
+    } else if(count ==14){
+      $('.textbox').html("That gold is actually a new genus of poisonous fungi, that exclusively grows on chocolate mousse cakes.");
+      $('#option1').html("I even gave you the right choice in the last one. Are you paying attention?");
+      $('#option2').html("You need to fuel your thirst."); //gameover
     }
   });
 
@@ -64,7 +88,7 @@ $(document).ready(function(){
     } else if (count ==2) {
       $('.textbox').html('You really want to talk to Kim after you cheated? Brave man.');
       $('#option1').html('Stick with programming.');
-      $('#option2').html("You don't need to be in the field of saving people.");
+      $('#option2').html("You don't need to be in the field of saving people."); //gameover
     } else if( count ==3){
       $('.textbox').html("Cool, you made it to Jay's house. What do you want to do?");
       $('#option1').html("Talk to Jay.");
@@ -72,7 +96,7 @@ $(document).ready(function(){
     } else if( count ==4){
       $('.textbox').html("Freak accident...Blue Ivy choked Kanye to death with a slinky.");
       $('#option1').html("Why didn't Kanye fight back?");
-      $('#option2').html("He's a pacifist.");
+      $('#option2').html("He's a pacifist."); //gameover
     } else if(count == 5){
       $('.textbox').html("Jay doesn't agree with your actions, but he won't judge you for your choice.");
       $('#option1').html("Should you come clean?");
@@ -84,7 +108,31 @@ $(document).ready(function(){
     } else if(count ==7){
       $('.textbox').html("There's one other person in the theater. He's a world renowed Illuminati hunter, supposedly hunting Jay-z. But I guess you'll have to do.");
       $('#option1').html("You're a real stand-up guy, Kanye.");
-      $('#option2').html("I heard the movie got some pretty good reviews though.");
+      $('#option2').html("I heard the movie got some pretty good reviews though."); //gameover
+    } else if(count ==8){
+      $('.textbox').html("Generic question here.");
+      $('#option1').html("Generic answer 1"); //this one is death
+      $('#option2').html("Generic answer 2"); //this one is life
+    } else if(count ==9){
+      $('.textbox').html("Good job. You smort. Generic question 2 here.");
+      $('#option1').html("Generic answer 1"); //this one is still death
+      $('#option2').html("Generic answer 2"); //this one is still life
+    } else if(count ==10){
+      $('.textbox').html("You almost there, You the best. Generic question 3 here.");
+      $('#option1').html("Generic answer 1"); //this one lives
+      $('#option2').html("Generic answer 2"); //this one lives too
+    } else if(count ==11){
+      $('.textbox').html("Looks like you survived the genie's intellectual barrage. He's been smitten by the North American Goddess of music, Drake. There's a golden spatula left behind, do you take it?");
+      $('#option1').html("Yes");
+      $('#option2').html("It's your choice, but why wouldn't you take a golden spatula...");
+    } else if(count ==12){
+      $('.textbox').html("You're overcome by tremendous hunger and thirst, where do you go?");
+      $('#option1').html("Feed your hunger.");
+      $('#option2').html("Fuel your thirst.");
+    } else if(count ==14){
+      $('.textbox').html("You decide to go to the Krusty Krab, where dreams come true. You get the option to satisfy your hunger or your thirst again.");
+      $('#option1').html("Do you choose the free salad bar?");
+      $('#option2').html("Do you choose the $5.00 small 2oz drink?");
     }
   });
 
