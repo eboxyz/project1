@@ -112,7 +112,9 @@ $(document).ready(function(){
     } else if (count ==2) {
       $('.textbox').html('You really want to talk to Kim after you cheated? Brave man.');
       $('#option1').html('Stick with programming.');
-      $('#option2').html("You don't need to be in the field of saving people."); //gameover
+      $('#option2').html("You don't need to be in the field of saving people.");
+      $('.game').hide();
+      $('#lost').show(); //gameover
     } else if( count ==3){
       $('.textbox').html("Cool, you made it to Jay's house. What do you want to do?");
       $('#option1').html("Talk to Jay.");
