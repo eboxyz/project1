@@ -2,18 +2,11 @@ var choices = [
   new Choice("Kim is ...", "Run", "Talk", 0),
   new Choice("Good Job!", "Let's head", "Let's go", 1)
 ] //http://www.javascriptkit.com/javatutors/oopjs2.shtml
-// function choices(choice, valid){
-//   this.choice = choice;
-//   this.valid = valid;
-// };
-
-var validity = function(choice){
-     if (!choice["valid"]){
-        function(){
-          alert('youdead')
-        }
-     } // 0 false, 1 true
+function choices(choice, valid){
+  this.choice = choice;
+  this.valid = valid;
 };
+
 var rchoice = [
   {
     "option" : "Kim is angry at Kanye for cheating on her with Susan Boyle! What do you do?",
@@ -218,7 +211,13 @@ var tchoice = [
   },
 ]
 
-
+var validity = function(choice){
+     if (!choice["valid"]){
+        function(){
+          alert('youdead')
+        }
+     } // 0 false, 1 true
+};
 
 var life = [
   {
