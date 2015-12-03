@@ -42,7 +42,14 @@
   border-radius: 50px;
   background-image: url("http://i.imgur.com/RpFhElX.jpg");
 }
-
+.kanye{
+  position: relative;
+  background-image: url("http://i.imgur.com/60fvxRZ.gif");
+  padding-right: 400px;
+  display: block;
+  width: 400px;
+  height: 500px;
+}
 .title{
   border: 2px solid #ffd700;
   width: 50%;
@@ -96,8 +103,34 @@
   padding: 8px;
 }
 
-#lost{
+.death{
   display: none;
+  border: 2px solid black;
+  height: 690px;
+  width: 100%;
+  position: relative;
+  border-radius: 50px;
+  background-image: url("http://i.imgur.com/RpFhElX.jpg");
+}
+#doption1{
+  border: 2px solid #ffd700;
+  height: 100px;
+  width: 400px;
+  position: relative;
+  left: 800px;
+  top: -450px;
+  border-radius: 12px;
+  color: white;
+}
+#doption2{
+  border: 2px solid #ffd700;
+  height: 100px;
+  width: 400px;
+  position: relative;
+  left: 800px;
+  top: -400px;
+  border-radius: 12px;
+  color: white;
 }
 </style>
 </head>
@@ -128,11 +161,14 @@
       <div class="options" id="option2">
       Click here to have Kanye die.
       </div>
-
-    <p id="lost">"You've lost the game."</p>
     </div>
   </div>
   <div class="death">
+    <div class="textbox">
+    </div>
+    <div class="options" id="doption1">
+    </div>
+    <div class="options" id="doption2">
     <div id="deathanim">
     </div>
   </div>

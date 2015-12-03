@@ -122,22 +122,30 @@ $(document).ready(function(){
   }
 
    $('#option1').click(function(){
-    if (option1 === 1){
+    if (option1 == 1){
       loadOptions(count);
       count += 1
     } else {
       // remove the options divs and print your death response
-      console.log("it's such a beautiful death... jumping out the windoooooow")
+      $('.game').hide();
+      $('.death').show();
+      $('.textbox').html(responses[count].option),
+      $('#doption1').html(responses[count].answer),
+      $('#doption2').html(responses[count].remark)
     }
    });//option1
 
    $('#option2').click(function(){
-      if (option1 === 1){
+      if (option2 === 1){
       loadOptions(count);
       count += 2
     } else {
+      $('.game').hide();
+      $('.death').show();
       // remove the options divs and print your death response
-      console.log("it's such a beautiful death... jumping out the windoooooow")
+      $('.textbox').html(responses[count].option),
+      $('#doption1').html(responses[count].answer),
+      $('#doption2').html(responses[count].remark)
     }
    });//option2
 
