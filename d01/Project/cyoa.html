@@ -10,7 +10,7 @@
 <style>
 
 .start{
-  display: block;
+  display: none;
   background:url("http://i.imgur.com/1wpT6vn.jpg");
   width: 950px;
   height: 580px;
@@ -40,16 +40,23 @@
   width: 100%;
   position: relative;
   border-radius: 50px;
-  background-image: url("http://i.imgur.com/RpFhElX.jpg");
+  background-image: url("http://i.imgur.com/XiJ4OLw.jpg");
 }
-.kanye{
-  position: relative;
-  background-image: url("http://i.imgur.com/60fvxRZ.gif");
-  padding-right: 400px;
+#kanye{
+  margin-top: 150px;
+  margin-left: 135px;
+  width: 90px;
+  height: 90px;
+  background-image: url("http://i.imgur.com/Siuqhpi.png");
   display: block;
-  width: 400px;
-  height: 500px;
+  animation: kanyerun 1.2s steps(4) infinite;
 }
+@keyframes kanyerun{
+  100%{
+    background-position: -358px;
+  }
+}
+
 .title{
   border: 2px solid #ffd700;
   width: 50%;
@@ -67,13 +74,14 @@
   border: 2px solid #ffd700;
   width: 95%;
   height: 100px;
-  margin-top: 420px;
+  margin-top: 180px;
   margin-left: 22px;
   border-radius: 12px;
   padding: 8px;
   font-family: "Sue Ellen Francisco";
   font-size: 25px;
   color: white;
+  background-image: url("http://i.imgur.com/NtimtVJ.jpg");
 }
 
 #option1{
@@ -82,9 +90,12 @@
   width: 400px;
   position: relative;
   left: 800px;
-  top: -450px;
+  top: -500px;
   border-radius: 12px;
   color: white;
+  color: #ffd700;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-image: url("http://i.imgur.com/K3wHf6o.jpg");
 }
 #option2{
   border: 2px solid #ffd700;
@@ -92,9 +103,12 @@
   width: 400px;
   position: relative;
   left: 800px;
-  top: -400px;
+  top: -450px;
   border-radius: 12px;
-  color: white;
+  color: #ffd700;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-image: url("http://i.imgur.com/K3wHf6o.jpg");
+  background-position: center;
 }
 
 .options{
@@ -104,13 +118,40 @@
 }
 
 .death{
-  display: none;
+  display: block;
   border: 2px solid black;
   height: 690px;
   width: 100%;
   position: relative;
   border-radius: 50px;
   background-image: url("http://i.imgur.com/RpFhElX.jpg");
+}
+#deathanim{
+  width: 100px;
+  height: 90px;
+  margin-top: 250px;
+  margin-left: 135px;
+  background-image: url("http://i.imgur.com/psaTaFn.png");
+  display: block;
+  animation: kanyedeath 2s steps(3) infinite;
+}
+@keyframes kanyedeath{
+  100%{
+    background-position: -286px;
+  }
+}
+.deathbox{
+  border: 2px solid #ffd700;
+  width: 95%;
+  height: 100px;
+  margin-top: 190px;
+  margin-left: 22px;
+  border-radius: 12px;
+  padding: 8px;
+  font-family: "Sue Ellen Francisco";
+  font-size: 25px;
+  color: white;
+  background-image: url("http://i.imgur.com/NtimtVJ.jpg");
 }
 #doption1{
   border: 2px solid #ffd700;
@@ -119,18 +160,18 @@
   position: relative;
   left: 800px;
   top: -450px;
+  margin-bottom: 20px;
   border-radius: 12px;
-  color: white;
 }
 #doption2{
-  border: 2px solid #ffd700;
+ border: 2px solid #ffd700;
   height: 100px;
   width: 400px;
   position: relative;
   left: 800px;
-  top: -400px;
+  top: -450px;
   border-radius: 12px;
-  color: white;
+  color: #ffd700;
 }
 </style>
 </head>
@@ -150,7 +191,7 @@
       <div class="title">
       This is a little story about Kanye West
       </div>
-      <div class = "kanye">
+      <div id= "kanye">
       </div>
       <div class="textbox">
         Welcome to Kanye's Home.
@@ -164,16 +205,19 @@
     </div>
   </div>
   <div class="death">
-    <div class="textbox">
+    <div id="deathanim">
+    </div>
+    <div class="deathbox">
     </div>
     <div class="options" id="doption1">
     </div>
     <div class="options" id="doption2">
-    <div id="deathanim">
     </div>
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script src="cyaon.js"></script>
+
+<script src="/js/prefixfree.min.js"></script>
 </body>
 </html>
