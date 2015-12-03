@@ -129,7 +129,7 @@ $(document).ready(function(){
       // remove the options divs and print your death response
       $('.game').hide();
       $('.death').show();
-      $('.textbox').html(responses[count].option),
+      $('.deathbox').html(responses[count].option),
       $('#doption1').html(responses[count].answer),
       $('#doption2').html(responses[count].remark)
     }
@@ -143,7 +143,7 @@ $(document).ready(function(){
       $('.game').hide();
       $('.death').show();
       // remove the options divs and print your death response
-      $('.textbox').html(responses[count].option),
+      $('.deathbox').html(responses[count].option),
       $('#doption1').html(responses[count].answer),
       $('#doption2').html(responses[count].remark)
     }

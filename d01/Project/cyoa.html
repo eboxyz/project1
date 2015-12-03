@@ -10,7 +10,7 @@
 <style>
 
 .start{
-  display: none;
+  display: block;
   background:url("http://i.imgur.com/1wpT6vn.jpg");
   width: 950px;
   height: 580px;
@@ -56,6 +56,7 @@
     background-position: -358px;
   }
 }
+/*http://www.kirupa.com/html5/sprite_sheet_animations_using_only_css.htm*/
 
 .title{
   border: 2px solid #ffd700;
@@ -118,13 +119,14 @@
 }
 
 .death{
-  display: block;
+  display: none;
   border: 2px solid black;
   height: 690px;
   width: 100%;
   position: relative;
   border-radius: 50px;
-  background-image: url("http://i.imgur.com/RpFhElX.jpg");
+  background-image: url("http://i.imgur.com/8TCZIgE.jpg");
+  background-size: cover;
 }
 #deathanim{
   width: 100px;
@@ -144,14 +146,15 @@
   border: 2px solid #ffd700;
   width: 95%;
   height: 100px;
-  margin-top: 190px;
+  margin-top: 170px;
   margin-left: 22px;
   border-radius: 12px;
   padding: 8px;
   font-family: "Sue Ellen Francisco";
   font-size: 25px;
-  color: white;
+  color: #ffd700;
   background-image: url("http://i.imgur.com/NtimtVJ.jpg");
+
 }
 #doption1{
   border: 2px solid #ffd700;
@@ -160,8 +163,13 @@
   position: relative;
   left: 800px;
   top: -450px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 12px;
+  color: #ffd700;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-image: url("http://i.imgur.com/QCGZtln.jpg");
+  background-size: 100%;
+  background-position: center;
 }
 #doption2{
  border: 2px solid #ffd700;
@@ -172,6 +180,10 @@
   top: -450px;
   border-radius: 12px;
   color: #ffd700;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-image: url("http://i.imgur.com/QCGZtln.jpg");
+  background-size: 100%;
+  background-position: center;
 }
 </style>
 </head>
@@ -214,10 +226,9 @@
     <div class="options" id="doption2">
     </div>
   </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<script type="text/javascript" src="jquery.easyModal.js"></script>
 <script src="cyaon.js"></script>
-
-<script src="/js/prefixfree.min.js"></script>
 </body>
 </html>
