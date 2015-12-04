@@ -147,7 +147,7 @@ $(document).ready(function(){
    });//option2
 
   $('#reset').click(function(){
-    var count = 0
+    count = 0
     $('.death').hide();
     $('.game').show();
     $('.textbox').html("");
