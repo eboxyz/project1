@@ -36,7 +36,8 @@ var feeds = [
   new Feed("Spongebob declares a challenge to you, Whoever can cook the better Krabby Patty is the winner."),
   new Feed("What's the first move?"),
   new Feed("You're really grilling the meat first? Real plebian of you. However, it is the proper way to make a gourmet Krabby Patty. What's next, Gordon Ramsey?"),
-  new Feed("You....You're incredible! Your skill as a chef has no peer. We are truly humbled being able to eat a hamburger so divine. We have no choice but to annoint you as head chef of Animal LA, and Son of a Gun.","You've really done it!","Although SpongeBob is off to the side crying..."),
+  new Feed("You....You're incredible! Your skill as a chef has no peer. We are truly humbled being able to eat a hamburger so divine. We have no choice but to annoint you as head chef of Animal LA, and Son of a Gun. Your ascendance to the top of the culinary world has brought you massive acclaim, and even greater influence than you previously held as a figurehead of rap and fashion culture. With this influence, you are able to withstand Kim Kardashian's revenge plots, and you happily move to England with your new Bae, Susan Boyle."),
+   //","You've really done it!","Although SpongeBob is off to the side crying...
 ]
 
 var rchoices = [
@@ -94,7 +95,6 @@ var responses = [
   new Answer("Looks like you died.","These can't all be sassy.","But really this one wasn't that hard."),
   new Answer("Who chops the vegetables first? What are you some kind of culinary prodigy?","That'll show you.","You were doomed the second you started this dumb game."),
   new Answer("Imbecile! The judges are all on the Atkins diet, and deathly afraid of ingesting anytype of carbohydrates.","These buns are from your local grocer aren't they? Generic store brand. Ugh.","The esteemed judges only eat organic, farm-to-table, gluten-free products. Do your research next time."),
-  new Answer(),
   new Answer("Your ascendance to the top of the culinary world has brought you massive acclaim, and even greater influence than you previously held as a figurehead of rap and fashion culture. With this influence, you are able to withstand Kim Kardashian's revenge plots, and you happily move to England with your new Bae, Susan Boyle.","Congratulations, I guess.","What more do you want? You've won the game already. Go outside and do something."),
 ]
 
@@ -137,7 +137,7 @@ $(document).ready(function(){
     if (option1 == 1){
       loadOptions(count);
       count += 1
-    } else if(option1 === 15){
+    } else if(option1 === 1){
       $('#winner').show();
       $('.textbox').html(responses[17].option);
       $('#option1').html(responses[17].answer);
@@ -160,12 +160,12 @@ $(document).ready(function(){
       if (option2 === 1){
       loadOptions(count);
       count += 2
-    } else if(option2 >= 9) {
-      $('.game').hide();
-      $('.death').show();
-      $('.deathbox').html(responses[count+1].option),
-      $('#doption1').html(responses[count+1].answer),
-      $('#doption2').html(responses[count+1].remark) //is this necessary, i think it is
+    // } else if(option2 >= 9) {
+    //   $('.game').hide();
+    //   $('.death').show();
+    //   $('.deathbox').html(responses[count+1].option),
+    //   $('#doption1').html(responses[count+1].answer),
+    //   $('#doption2').html(responses[count+1].remark) //
     }else if(option2 === 15){
       $('#winbtn').show();
       $('.textbox').html(responses[17].option);
