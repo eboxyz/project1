@@ -110,12 +110,22 @@ $(document).ready(function(){
     $(".start").hide();
     $(".game").show();
     });//startbutton
-
+// var randomDivs = $("div.child").get().sort(function(){
+//      return Math.round(Math.random())-0.5;
+// });
+// $(randomDivs).appendTo(randomDivs[0].parentNode).show();
 
   var loadOptions = function(count){
     $('.textbox').html(feeds[count].reply);
     array = [rchoices, wchoices]
     // enter shuffle function
+    function shuffle(){
+        $(".optionz").each(function(){
+            var divs = $(this).find('div');
+            for(var i = 0; i < divs.length; i++)
+              $(divs[i]).remove();
+          });
+      };
     $('#option1').html(array[0][count].choice);
     $('#option2').html(array[1][count].choice);
     option1 = array[0][count].validity;
