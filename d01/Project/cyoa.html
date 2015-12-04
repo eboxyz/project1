@@ -57,7 +57,18 @@
   }
 }
 /*http://www.kirupa.com/html5/sprite_sheet_animations_using_only_css.htm*/
-
+/*#kanyeDancing{
+  width: 90px;
+  height: 90px;
+  background-image: url("http://i.imgur.com/iwx56g4.png");
+  display: block;
+  animation: kanyedance 1s steps(6) infinite;
+}
+@keyframes kanyedance{
+  100%{
+    background-position: -1036px;
+  }
+}*/
 .title{
   border: 2px solid #ffd700;
   width: 50%;
@@ -70,7 +81,10 @@
   font-size: 25px;
   color: white;
 }
-
+#jayz{
+  background: url("http://i.imgur.com/KnuubuG.jpg");
+  display: none;
+}
 .textbox{
   border: 2px solid #ffd700;
   width: 95%;
@@ -192,8 +206,11 @@
 </head>
 <body>
   <title>If you're playing this, it's too late</title>
-
-
+  <div class="modal-background">
+    <div class="modal">
+      <button id="close">Close</button>
+    </div>
+  </div>
   <div class="start">
     <p id="welcome">Welcome to the game, Kanye has cheated on Kim with Susan Boyle, and she found out! Help Kanye escape from Kim's wrath!</p>
     <p id="disclaimer">*All characters appearing in this work are fictitious. Any resemblance to real persons, living or dead, is purely coincidental.*</p>
@@ -207,6 +224,8 @@
       This is a little story about Kanye West
       </div>
       <div id= "kanye">
+        <div id="kanyeDancing">
+        </div>
       </div>
       <div class="textbox">
         Welcome to Kanye's Home.

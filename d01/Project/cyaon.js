@@ -145,6 +145,12 @@ $(document).ready(function(){
       $('#doption2').html(responses[count].remark)
     }
    });//option2
+   $(function(){
+      $('#jayz').easyModal();
+   });
+   $("#option1").click(function(){
+     $('#jayz').trigger();
+  });
 
   $('#reset').click(function(){
     count = 0
