@@ -180,10 +180,13 @@
   top: -450px;
   border-radius: 12px;
   color: #ffd700;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /*http://stackoverflow.com/questions/2570972/css-font-border*/
   background-image: url("http://i.imgur.com/QCGZtln.jpg");
   background-size: 100%;
   background-position: center;
+}
+#reset{
+  display: block;
 }
 </style>
 </head>
@@ -217,6 +220,9 @@
     </div>
   </div>
   <div class="death">
+    <div class="title">
+    <input type='button' id='reset' value='reset'/>
+      </div>
     <div id="deathanim">
     </div>
     <div class="deathbox">

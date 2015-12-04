@@ -25,8 +25,7 @@ var feeds = [
   new Feed("Cool, you made it to Jay's house. What do you want to do?"),
   new Feed("Jay doesn't agree with your actions, but he won't judge you for your choice."),
   new Feed("Jay wants to know, where are you going to go?"),
-  new Feed("Wow! A musical genie is waiting for you at your studio. He introduces himself as DJ Khaled. He's mad that you haven't hit him up for a song in a while. You have to answer his questions properly in order to pass."),
-  new Feed("Who da best?"),
+  new Feed("Wow! A musical genie is waiting for you at your studio. He introduces himself as DJ Khaled. He's mad that you haven't hit him up for a song in a while. You have to answer his questions properly in order to pass. Here's the first question. Who da best?"),
   new Feed("Good job, you smwort. Here's anotha one. If you have a cold hot pocket, is it just a pocket?"),
   new Feed("You doin' good, you almost there. This is the last one: What's the difference between a piano, a tuna, and a pot of glue?"),
   new Feed("Looks like you've survived the genie's intellectual barrage. He's been smitten by the North American Goddess of Music, Drake. There's a gold spatula left behind in his smoldering ashes, do you take it?"),
@@ -34,12 +33,9 @@ var feeds = [
   new Feed("You have an option for what you want to eat."),
   new Feed("You decide to go to the Krusty Krab, to quench your thirst. You have options!"),
   new Feed("Wow!! You can choose anything you want! And you can have a whole plate of it! But only that one plate, and that one thing. This isn't a charity, y'know. - Mr. Krabs"),
-  new Feed("Them olives up to something. Justin Timberlake hands you a bottle of Olive Juice, and whispers 'Olive Juice...' sensually in your ear. He whisks you away, taking you to a local park. Spongebob approaches you."),
   new Feed("Spongebob declares a challenge to you, Whoever can cook the better Krabby Patty is the winner."),
   new Feed("What's the first move?"),
   new Feed("You're really grilling the meat first? Real plebian of you. However, it is the proper way to make a gourmet Krabby Patty. What's next, Gordon Ramsey?"),
-  new Feed(),
-  new Feed(),
 ]
 
 var rchoices = [
@@ -48,13 +44,11 @@ var rchoices = [
   new Choice("Talk to Jay",1),
   new Choice("You can keep running, but you can't stay with Jay anymore.",1),
   new Choice("Music has always been your refuge, to the studio we go!",1),
-  new Choice("Are you ready to answer?",1),
-  new Choice("Does it really matter if you are?",1),
   new Choice("We da best",1),
   new Choice("No...",1),
   new Choice("You can tuna piano, but you can't piano a tuna",1),
+  new Choice("Yes",1),
   new Choice("Quench your thirst",1),
-  new Choice("Here's a chance to go back and quench your thirst...",1),
   new Choice("Do you go to the free salad bar?",1),
   new Choice("Chopped black olives",1),
   new Choice("Just talk to him, he's not that bad...",1),
@@ -72,6 +66,7 @@ var wchoices = [
   new Choice ("You da best.",0),
   new Choice ("What?",0),
   new Choice ("Wait what about the glue...?",0),
+  new Choice ("No",1),
   new Choice ("Feed your hunger",0),
   new Choice ("Or pay $5.00 for a 2oz drink?",0),
   new Choice ("Beets",0),
@@ -81,6 +76,7 @@ var wchoices = [
   new Choice ("Toast the buns",0),
 ]
 var responses = [
+  new Answer("This is really straightforward.", "Like...it tells you that he'll die.","Don't be dumb."),
   new Answer("You really want to talk to Kim after you cheated on her? You're a brave man.","Should just stick with programming.","Leave saving lives for the professionals."),
   new Answer("The plane actually forgot to refuel before it took off. Yeah. You died.","It's actually kind of eerie how it happened.","Because you landed in Lake Erie. Hah."),
   new Answer("Freak accident. Blue Ivy choked Kanye to death with a slinky.","Why didn't Kanye fight back?","He wanted to be Blue Ivy's pacifier."),
@@ -88,6 +84,7 @@ var responses = [
   new Answer("There's another person in the theater, the world renowned Illuminati Hunter: Smush Parker.","Yup, he was trying to hunt down Kobe Bryant while he was on the Lakers.","His goal was to catch Jay-Z today, but you'll do I guess."),
   new Answer("You ain't smwort enough for DJ Khaled.","Anotha one bites the dust.","You a genius!"),
   new Answer("You needa work on yourself.","It really isn't your day.","It REALLY isn't your day."),
+  new Answer("I thought you'd get stuck there!","Yeah.","Dadjokes 'r us."),
   new Answer("The gold flake is actually an extremely poisonous genus of fungi. You suffocate almost immediately upon it touching your tastebuds.","I gave you the choice to quench your thirst...","Sigh..."),
   new Answer("Someone likes their nutrients. Too bad Dr. Dre was waiting to hit you with a lawsuit for copyright infringement.","Bears, Beets.","Battlestar Galactica"),
   new Answer("Imbecile! The judges are all on the Atkins diet, and deathly afraid of ingesting anytype of carbohydrates.","These buns are from your local grocer aren't they? Generic store brand. Ugh.","The esteemed judges only eat organic, farm-to-table, gluten-free products. Do your research next time."),
@@ -149,4 +146,13 @@ $(document).ready(function(){
     }
    });//option2
 
+  $('#reset').click(function(){
+    var count = 0
+    $('.death').hide();
+    $('.game').show();
+    $('.textbox').html("");
+    $('#option1').html("");
+    $('#option2').html("");
+
+  });
 });//documentreadyfunction
