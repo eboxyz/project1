@@ -36,6 +36,7 @@ var feeds = [
   new Feed("Spongebob declares a challenge to you, Whoever can cook the better Krabby Patty is the winner."),
   new Feed("What's the first move?"),
   new Feed("You're really grilling the meat first? Real plebian of you. However, it is the proper way to make a gourmet Krabby Patty. What's next, Gordon Ramsey?"),
+  new Feed("You....You're incredible! Your skill as a chef has no peer. We are truly humbled being able to eat a hamburger so divine. We have no choice but to annoint you as head chef of Animal LA, and Son of a Gun.","You've really done it!","Although SpongeBob is off to the side crying..."),
 ]
 
 var rchoices = [
@@ -85,17 +86,19 @@ var responses = [
   new Answer("You ain't smwort enough for DJ Khaled.","Anotha one bites the dust.","You a genius!"),
   new Answer("You needa work on yourself.","It really isn't your day.","It REALLY isn't your day."),
   new Answer("I thought you'd get stuck there!","Yeah.","Dadjokes 'r us."),
-  new Answer("The gold flake is actually an extremely poisonous genus of fungi. You suffocate almost immediately upon it touching your tastebuds.","I gave you the choice to quench your thirst...","Sigh..."),
+  new Answer("This option doesn't really exist","Testing.","1,2,3"),
+  new Answer("Hungry...","Every restaurant is declining you service...","DAMN YOU, KIM KARDASHIAN!!!"),
+  new Answer("I mean, there's really no clear-cut answer here.", "I'm just a dick.", "At least you know which one not to choose next time."),
   new Answer("Someone likes their nutrients. Too bad Dr. Dre was waiting to hit you with a lawsuit for copyright infringement.","Bears, Beets.","Battlestar Galactica"),
-  new Answer("Imbecile! The judges are all on the Atkins diet, and deathly afraid of ingesting anytype of carbohydrates.","These buns are from your local grocer aren't they? Generic store brand. Ugh.","The esteemed judges only eat organic, farm-to-table, gluten-free products. Do your research next time."),
-  new Answer("Looks like you died.","These can't all be sassy.","But really this one wasn't that hard."),
   new Answer("Neptune smites you on the spot.","You're a real jerk you know that?","Try being nice one time, maybe you'll like it. Jerk."),
+  new Answer("Looks like you died.","These can't all be sassy.","But really this one wasn't that hard."),
   new Answer("Who chops the vegetables first? What are you some kind of culinary prodigy?","That'll show you.","You were doomed the second you started this dumb game."),
-  new Answer("You....You're incredible! Your skill as a chef has no peer. We are truly humbled being able to eat a hamburger so divine. We have no choice but to annoint you as head chef of Animal LA, and Son of a Gun.","You've really done it!","Although SpongeBob is off to the side crying..."),
+  new Answer("Imbecile! The judges are all on the Atkins diet, and deathly afraid of ingesting anytype of carbohydrates.","These buns are from your local grocer aren't they? Generic store brand. Ugh.","The esteemed judges only eat organic, farm-to-table, gluten-free products. Do your research next time."),
+  new Answer(),
   new Answer("Your ascendance to the top of the culinary world has brought you massive acclaim, and even greater influence than you previously held as a figurehead of rap and fashion culture. With this influence, you are able to withstand Kim Kardashian's revenge plots, and you happily move to England with your new Bae, Susan Boyle.","Congratulations, I guess.","What more do you want? You've won the game already. Go outside and do something."),
 ]
 
-
+//change response[0] (logic is breaking the response html)
 
 
 $(document).ready(function(){
@@ -108,6 +111,7 @@ $(document).ready(function(){
     $(".game").show();
     });//startbutton
 
+
   var loadOptions = function(count){
     $('.textbox').html(feeds[count].reply);
     array = [rchoices, wchoices]
@@ -116,18 +120,28 @@ $(document).ready(function(){
     $('#option2').html(array[1][count].choice);
     option1 = array[0][count].validity;
     option2 = array[1][count].validity;
-  }
+  };//game works here
+
 
    $('#option1').click(function(){
     if (option1 == 1){
       loadOptions(count);
       count += 1
+    } else if(option1 === 15){
+      $('#winner').show();
+      $('.textbox').html(responses[17].option);
+      $('#option1').html(responses[17].answer);
+      $('#option2').html(responses[17].remark);
+    } else if(option1 == 16){
+      $('.textbox').html(responses[18].option);
+      $('#option1').html(responses[18].answer);
+      $('#option2').html(responses[18].remark);
+      $('#winner').show();
     } else {
-      // remove the options divs and print your death response
       $('.game').hide();
       $('.death').show();
-      $('.deathbox').html(responses[count].option),
-      $('#doption1').html(responses[count].answer),
+      $('.deathbox').html(responses[count].option);
+      $('#doption1').html(responses[count].answer);
       $('#doption2').html(responses[count].remark)
     }
    });//option1
@@ -136,29 +150,44 @@ $(document).ready(function(){
       if (option2 === 1){
       loadOptions(count);
       count += 2
-    } else {
+    } else if(option2 >= 9) {
       $('.game').hide();
       $('.death').show();
-      // remove the options divs and print your death response
+      $('.deathbox').html(responses[count+1].option),
+      $('#doption1').html(responses[count+1].answer),
+      $('#doption2').html(responses[count+1].remark) //is this necessary, i think it is
+    }else if(option2 === 15){
+      $('#winbtn').show();
+      $('.textbox').html(responses[17].option);
+      $('#option1').html(responses[17].answer);
+      $('#option2').html(responses[17].remark);
+    }else if(option2 == 16){
+      $('.textbox').html(responses[18].option);
+      $('#option1').html(responses[18].answer);
+      $('#option2').html(responses[18].remark);
+    } else{
+      $('.game').hide();
+      $('.death').show();
       $('.deathbox').html(responses[count].option),
       $('#doption1').html(responses[count].answer),
       $('#doption2').html(responses[count].remark)
     }
    });//option2
-   $(function(){
-      $('#jayz').easyModal();
-   });
-   $("#option1").click(function(){
-     $('#jayz').trigger();
-  });
+
+  //  $(function(){
+  //     $('#jayz').easyModal();
+  //  });
+  //  $("#option1").click(function(){
+  //    $('#jayz').trigger();
+  // }); //Modal
 
   $('#reset').click(function(){
     count = 0
     $('.death').hide();
     $('.game').show();
-    $('.textbox').html("");
-    $('#option1').html("");
-    $('#option2').html("");
+    $('.textbox').html("Here you go. Clean slate.");
+    $('#option1').html("Click here to start over again.");
+    $('#option2').html("Don't click here.");
 
   });
 });//documentreadyfunction

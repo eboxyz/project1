@@ -10,7 +10,7 @@
 <style>
 
 .start{
-  display: block;
+  display: none;
   background:url("http://i.imgur.com/1wpT6vn.jpg");
   width: 950px;
   height: 580px;
@@ -34,7 +34,7 @@
 }
 
 .game{
-  display: none;
+  display: block;
   border: 2px solid black;
   height: 690px;
   width: 100%;
@@ -99,6 +99,12 @@
   background-image: url("http://i.imgur.com/NtimtVJ.jpg");
 }
 
+.options{
+  font-family: "Voltaire";
+  font-size: 17px;
+  padding: 8px;
+}
+
 #option1{
   border: 2px solid #ffd700;
   height: 100px;
@@ -125,12 +131,20 @@
   background-image: url("http://i.imgur.com/K3wHf6o.jpg");
   background-position: center;
 }
-
-.options{
-  font-family: "Voltaire";
-  font-size: 17px;
-  padding: 8px;
+/*#winbtn{
+  display:none;
 }
+.winner{
+  display: block;
+  border: 2px solid black;
+  height: 690px;
+  width: 100%;
+  position: relative;
+  border-radius: 50px;
+}
+#winmsg{
+
+}*/
 
 .death{
   display: none;
@@ -202,15 +216,20 @@
 #reset{
   display: block;
 }
+
+/*#modal-background{
+  display:none;
+}*/
 </style>
 </head>
 <body>
   <title>If you're playing this, it's too late</title>
-  <div class="modal-background">
-    <div class="modal">
+  <!-- div class="modal-background">
+    <div id="modal">
+      <p> You've won the game!!!</p>
       <button id="close">Close</button>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
   <div class="start">
     <p id="welcome">Welcome to the game, Kanye has cheated on Kim with Susan Boyle, and she found out! Help Kanye escape from Kim's wrath!</p>
     <p id="disclaimer">*All characters appearing in this work are fictitious. Any resemblance to real persons, living or dead, is purely coincidental.*</p>
@@ -232,12 +251,18 @@
       </div>
       <div class="options" id="option1">
       Click here to have Kanye live.
+      <!-- <button type="win button" id="winbtn">Click here.</button> -->
       </div>
       <div class="options" id="option2">
       Click here to have Kanye die.
       </div>
     </div>
   </div>
+ <!--  <div class="winner">
+    <div class="msg" id="winmsg">
+    You won the game!!!
+    </div>
+  </div> -->
   <div class="death">
     <div class="title">
     <input type='button' id='reset' value='reset'/>
